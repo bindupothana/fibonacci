@@ -1,17 +1,23 @@
 var app=angular.module('fibApp',[]);
 app.controller('fibCtrl',function($scope){
-	$scope.fibonacciInput=0;
 	 
-	var a=0; var b=1; var c;
-	$scope.fibonacci=function(){
-		for ( var i=1; i<=n; i++){
-			c=a+b;
+	$scope.fibonacci=function(num){
+	 var a=0, b=1 ,output=0; 
+	 $scope.result = [];
+   	 $scope.result.push(a)
+	 $scope.result.push(b)
+	   for ( var i=2; i<=$scope.num; i++){
+		 console.log("output",output)
+		 output=a+b;
 			a=b;
-			b=c;
+			b=output;
+			
+         $scope.result.push(output)
+
 		}
+       console.log("Result", $scope.result)
 
 	}
 
-console.log("$scope.fibonacci"$scope.fibonacci);
 
 });
